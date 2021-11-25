@@ -49,18 +49,22 @@ class Persona {
     //métodos
     //Overriding
     toString() {
+        return `id=${this.idPersona}: ${this.nombre} ${this.apellido}, ${this.edad} años`;
         //return 'id=' + this.idPersona +': '+ this.nombre +' '+ this.apellido +', '+ this.edad + ' años';
         //usamos el concepto de template string
-        return `id=${this.idPersona}: ${this.nombre} ${this.apellido}, ${this.edad} años`;
+       
     }
 }
 
+//Class Empleado
 class Empleado extends Persona {
 
+    static contadorEmpleados = 0;
+    
     constructor(nombre, apellido, edad, sueldo) {
         super(nombre, apellido, edad);
         this.sueldo = sueldo;
-        this.idEmpleado = Persona.contadorPersonas;
+        this.idEmpleado = ++Empleado.contadorEmpleados;
     }
 
     //getters
@@ -82,17 +86,22 @@ class Empleado extends Persona {
 
     //Overriding
     toString() {
-        return 'id=' + this.idEmpleado +': '+ this.nombre +' '+ this.apellido +', '+ this.edad + ' años' + ', ' + this.sueldo;
+        return `${super.toString()} ${this.idEmpleado} ${this.sueldo}`;
+        //return super.toString() + ' ' + this.idEmpleado + ' ' + this.sueldo;
+        //return 'id=' + this.idEmpleado +': '+ this.nombre +' '+ this.apellido +', '+ this.edad + ' años' + ', ' + this.sueldo;
     }
 }
 
+//Clss Cliente
 class Cliente extends Persona {
+
+    static contadorClientes = 0;
 
     fechaRegistro = new Date();
     constructor(nombre, apellido, edad, fechaRegistro) {
         super(nombre, apellido, edad);
         this.fechaRegistro = fechaRegistro;
-        this.idCliente = Persona.contadorPersonas;
+        this.idCliente = ++Cliente.contadorClientes;
     }
 
     //getters
@@ -115,7 +124,8 @@ class Cliente extends Persona {
     //métodos
     //Overriding
     toString() {
-        return 'id=' + this.idCliente +': '+ this.nombre +' '+ this.apellido +', '+ this.edad + ' años, '+ this.fechaRegistro;
+        return `${super.toString()} ${this.idCliente} ${this.fechaRegistro}`;
+        //return 'id=' + this.idCliente +': '+ this.nombre +' '+ this.apellido +', '+ this.edad + ' años, '+ this.fechaRegistro;
     }
 }
 
