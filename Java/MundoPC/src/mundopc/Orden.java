@@ -3,18 +3,18 @@ package mundopc;
 public class Orden {
     
     //atributos de clase
-    static private int contadorOrdenes;
-    static private int contadorProductos;
+    static private int contadorOrdenes = 0;
     
     //atributos de instancia
     private int idOrden;
+    private int contadorProductos;
     Computadora[] computadoras;
     
     //constructor
     public Orden() {
         this.idOrden = ++Orden.contadorOrdenes;
+        this.contadorProductos = 0;
         computadoras = new Computadora[15];
-        Orden.contadorProductos = 0;
     }
     
     //getters
@@ -25,15 +25,14 @@ public class Orden {
     //métodos
     public void agregarComputadora(Computadora c) {
         
-        computadoras[Orden.contadorProductos] = c;
-        ++Orden.contadorProductos;
+        computadoras[this.contadorProductos] = c;
+        this.contadorProductos++;
     }
     
     public String mostrarOrden() {
         
         String productos = "";
-        
-        for(int i = 0; i < Orden.contadorProductos; i++) {
+        for(int i = 0; i < this.contadorProductos; i++) {
             productos = productos + this.computadoras[i];
         } 
         return "IdOrden=" + this.getIdOrden() + "\n" + productos;

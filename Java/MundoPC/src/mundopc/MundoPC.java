@@ -36,8 +36,9 @@ public class MundoPC {
         o1.agregarComputadora(c2);
         
         o2.agregarComputadora(c2);
+        o2.agregarComputadora(c2);
         
-        System.out.println(o1.mostrarOrden());
+        System.out.println(o1.mostrarOrden()+ "\n");
         System.out.println(o2.mostrarOrden());
     }
 }
