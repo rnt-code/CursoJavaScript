@@ -62,7 +62,7 @@ class Orden{
     calcularTotal(){
         let totalVenta = 0;
         for(let producto of this._productos){
-            totalVenta += producto.precio;//totalVenta = totalVenta + producto.precio
+            totalVenta += producto.precio; //totalVenta = totalVenta + producto.precio
         }
         return totalVenta;
     }

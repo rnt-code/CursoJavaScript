@@ -15,6 +15,7 @@ public class Orden {
     public Orden() {
         this.idOrden = ++Orden.contadorOrdenes;
         productos = new Producto[5];
+        Orden.contadorProductosAgregados = 0;
     }
     
     //setters & getters

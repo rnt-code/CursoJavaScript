@@ -12,7 +12,7 @@ public class SistemaVentas {
         p5 = new Producto("Sillón", 6100);
         p6 = new Producto("Ratonera", 3100);
          
-        Orden o1;
+        Orden o1, o2;
         o1 = new Orden();
         
         o1.agregarProducto(p1);
@@ -24,5 +24,16 @@ public class SistemaVentas {
         System.out.println(o1);
         
         o1.agregarProducto(p6);
+        
+        o2 = new Orden();
+        o2.agregarProducto(p1);
+        o2.agregarProducto(p2);
+        o2.agregarProducto(p3);
+        o2.agregarProducto(p4);
+        o2.agregarProducto(p5);
+        
+        System.out.println(o2);
+        
+        o2.agregarProducto(p6);
     }
 }
