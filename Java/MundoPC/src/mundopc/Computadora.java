@@ -22,11 +22,11 @@ public class Computadora {
     
     //getter & setters
     public int getIdComputadora() {
-        return idComputadora;
+        return this.idComputadora;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -42,7 +42,7 @@ public class Computadora {
     }
 
     public Teclado getTeclado() {
-        return teclado;
+        return this.teclado;
     }
 
     public void setTeclado(Teclado teclado) {
@@ -50,7 +50,7 @@ public class Computadora {
     }
 
     public Raton getRaton() {
-        return raton;
+        return this.raton;
     }
 
     public void setRaton(Raton raton) {

@@ -22,11 +22,11 @@ class Persona {
     
     //getters and setters
     public int getIdPersona() {
-        return idPersona;
+        return this.idPersona;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -34,7 +34,7 @@ class Persona {
     }
 
     public String getApellido() {
-        return apellido;
+        return this.apellido;
     }
     
     public void setApellido(String apellido) {
@@ -42,7 +42,7 @@ class Persona {
     }
 
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
 
     public void setEdad(int edad) {

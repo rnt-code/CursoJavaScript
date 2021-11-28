@@ -20,7 +20,7 @@ public class Orden {
     
     //setters & getters
     public int getIdOrden() {
-        return idOrden;
+        return this.idOrden;
     }
     
     //métodos

@@ -18,11 +18,11 @@ class Empleado extends Persona {
     
     //getters & setters
     public int getIdEmpleado() {
-        return idEmpleado;
+        return this.idEmpleado;
     }
 
     public float getSueldo() {
-        return sueldo;
+        return this.sueldo;
     }
 
     public void setSueldo(float sueldo) {

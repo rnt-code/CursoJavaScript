@@ -15,14 +15,13 @@ public class Raton extends DispositivoEntrada {
     }
     
     //getter & setters
-
     public int getIdRaton() {
-        return idRaton;
+        return this.idRaton;
     }
 
     @Override
     public String getTipoEntrada() {
-        return tipoEntrada;
+        return this.tipoEntrada;
     }
 
     @Override
@@ -32,7 +31,7 @@ public class Raton extends DispositivoEntrada {
 
     @Override
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     @Override
@@ -40,6 +39,7 @@ public class Raton extends DispositivoEntrada {
         this.marca = marca;
     }
     
+    //métodos
     @Override
     public String toString() {
         return "IdRat=" + this.getIdRaton() + " " + this.getTipoEntrada() + " " + this.getMarca();

@@ -6,22 +6,22 @@ public class Teclado extends DispositivoEntrada {
     static private int contadorTeclados;
     
     //atributos de instancia
-    private int idTeclados;
+    private int idTeclado;
 
     //constructor
     public Teclado(String tipoEntrada, String marca) {
         super(tipoEntrada, marca);
-        this.idTeclados = ++Teclado.contadorTeclados;
+        this.idTeclado = ++Teclado.contadorTeclados;
     }
 
     //getter & setters
-    public int getIdTeclados() {
-        return idTeclados;
+    public int getIdTeclado() {
+        return this.idTeclado;
     }
 
     @Override
     public String getTipoEntrada() {
-        return tipoEntrada;
+        return this.tipoEntrada;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Teclado extends DispositivoEntrada {
 
     @Override
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     @Override
@@ -42,6 +42,6 @@ public class Teclado extends DispositivoEntrada {
     //métodos
     @Override
     public String toString() {
-        return "idTec=" + this.getIdTeclados() + " " + this.getTipoEntrada() + " " + this.getMarca();
+        return "idTec=" + this.getIdTeclado() + " " + this.getTipoEntrada() + " " + this.getMarca();
     }
 }

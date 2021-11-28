@@ -19,11 +19,11 @@ public class Cliente extends Persona {
     
     //setters & getters
     public int getIdCliente() {
-        return idCliente;
+        return this.idCliente;
     }
 
     public LocalDate getFechaRegistro() {
-        return fechaRegistro;
+        return this.fechaRegistro;
     }
 
     public void setFechaRegistro(LocalDate fechaRegistro) {

@@ -19,7 +19,7 @@ public class Orden {
     
     //getters
     public int getIdOrden() {
-        return idOrden;
+        return this.idOrden;
     }
     
     //métodos
@@ -31,10 +31,10 @@ public class Orden {
     
     public String mostrarOrden() {
         
-        String productos = "";
+        String producto = "";
         for(int i = 0; i < this.contadorProductos; i++) {
-            productos = productos + this.computadoras[i];
+            producto = producto + this.computadoras[i];
         } 
-        return "IdOrden=" + this.getIdOrden() + "\n" + productos;
+        return "IdOrden=" + this.getIdOrden() + "\n" + producto;
     }
 }

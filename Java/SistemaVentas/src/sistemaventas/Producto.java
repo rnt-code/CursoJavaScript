@@ -22,11 +22,11 @@ public class Producto {
     
     //setters & getters
     public int getIdProducto() {
-        return idProducto;
+        return this.idProducto;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -34,7 +34,7 @@ public class Producto {
     }
 
     public float getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     public void setPrecio(float precio) {

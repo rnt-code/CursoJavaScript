@@ -19,11 +19,11 @@ public class Monitor {
     
     //getter & setters
     public int getIdMonitor() {
-        return idMonitor;
+        return this.idMonitor;
     }
 
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public void setMarca(String marca) {
@@ -31,7 +31,7 @@ public class Monitor {
     }
 
     public String getTamanio() {
-        return tamanio;
+        return this.tamanio;
     }
 
     public void setTamanio(String tamanio) {
