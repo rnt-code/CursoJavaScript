@@ -1,6 +1,6 @@
 package mundopc;
 
-public abstract class DispositivoEntrada {
+public class DispositivoEntrada {
     
     //atributos de instancia
     String tipoEntrada;
@@ -13,11 +13,24 @@ public abstract class DispositivoEntrada {
     }
 
     //abstract getters & setters
-    public abstract String getTipoEntrada();
- 
-    public abstract void setTipoEntrada(String tipoEntrada);
+    public String getTipoEntrada() {
+        return this.tipoEntrada;
+    }
 
-    public abstract String getMarca();
+    public void setTipoEntrada(String tipoEntrada) {
+        this.tipoEntrada = tipoEntrada;
+    }
 
-    public abstract void setMarca(String marca);
+    public String getMarca() {
+        return this.marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    @Override
+    public String toString() {
+        return this.getTipoEntrada() + " " + this.getMarca();
+    }
 }

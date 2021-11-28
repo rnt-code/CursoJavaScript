@@ -27,6 +27,11 @@ class DispositivoEntrada {
     set setMarca(marca) {
         this.marca = marca;
     }
+
+    //métodos
+    toString() {
+        return this.getTipoEntrada + " " + this.getMarca;
+    }
 }
 
 class Raton extends DispositivoEntrada {
@@ -46,8 +51,7 @@ class Raton extends DispositivoEntrada {
 
     //métodos
     toString() {
-        //return "IdRat=" + this.getIdRaton + " " + this.getTipoEntrada + " " + this.getMarca;
-        return `IdRat=${this.getIdRaton} ${this.getTipoEntrada} ${this.getMarca}`;
+        return "IdRat=" + this.getIdRaton + " " + super.toString();
     }
 }
 
@@ -69,7 +73,7 @@ class Teclado extends DispositivoEntrada {
     
     //métodos
     toString() {
-        return "idTec=" + this.getIdTeclado + " " + this.getTipoEntrada + " " + this.getMarca;
+        return "idTec=" + this.getIdTeclado + " " + super.toString();
     }
 }
 
@@ -108,7 +112,8 @@ class Monitor {
     
     //métodos
     toString() {
-        return "IdMon=" + this.getIdMonitor + " " + this.getMarca + " " + this.getTamanio;
+        //return "IdMon=" + this.getIdMonitor + " " + this.getMarca + " " + this.getTamanio;
+        return `IdMon=${this.getIdMonitor} ${this.getMarca} ${this.getTamanio}`;
     }    
 }
 
@@ -217,7 +222,6 @@ class Orden {
         console.log(`IdOrden=${this.getIdOrden} ${computadorasOrden}`);
     }
 }
-
     
     let m1 = new Monitor("HP", "15 pulg");
     let m2 = new Monitor("Dell", "27 pulg");
@@ -231,7 +235,7 @@ class Orden {
     let c1 = new Computadora("HP", m2, t1, r2);
     let c2 = new Computadora("Armada", m1, t2, r1);
 
-    
+    /*
     console.log(m1.toString());
     console.log(m2.toString());
     console.log(t1.toString());
@@ -240,7 +244,7 @@ class Orden {
     console.log(r2.toString());
     console.log(c1.toString());
     console.log(c2.toString());
-    
+    */
     
     let o1 = new Orden();
     let o2 = new Orden();
