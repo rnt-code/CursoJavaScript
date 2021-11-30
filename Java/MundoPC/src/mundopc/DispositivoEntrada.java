@@ -3,8 +3,8 @@ package mundopc;
 public class DispositivoEntrada {
     
     //atributos de instancia
-    String tipoEntrada;
-    String marca;
+    private String tipoEntrada;
+    private String marca;
 
     //constructor
     public DispositivoEntrada(String tipoEntrada, String marca) {
