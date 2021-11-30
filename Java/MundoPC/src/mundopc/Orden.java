@@ -8,7 +8,7 @@ public class Orden {
     //atributos de instancia
     private int idOrden;
     private int contadorProductos;
-    Computadora[] computadoras;
+    private Computadora[] computadoras;
     
     //constructor
     public Orden() {
