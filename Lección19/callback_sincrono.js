@@ -16,8 +16,9 @@ const getUser = (id, cb) => {
     //la función callback se ejecutará acá:
     //con cb(null, user), asumimos que no hay error (null)
     //con cb('El usuario no existe'), entraría en el error
-    //cb('User does not exist');
-    cb(null, user);    
+    
+    cb('User does not exist');
+    //cb(null, user);    
 }
 
 /* 
@@ -33,11 +34,15 @@ y tiene dos argumentos: el error y el objeto user, que tiene dos propiedades: na
 */
 
 //la función: '(err, user) => {}' es el callback
-
+//consulta a la base de datos (de un solo dato!!!)
 getUser(1, (err, user) => {
     
-    if(err) return console.log(err)
-    console.log(`User name is: ${user.name}`)
+    if(err) {
+        return console.log(err);
+    }
+    else {
+        console.log(`User name is: ${user.name}`);
+    }
 });
 
 
