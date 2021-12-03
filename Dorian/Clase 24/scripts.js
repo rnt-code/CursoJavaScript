@@ -6,24 +6,39 @@ document | element .querySelector('selectorCSS') - Accede al primer elemento que
 document | element .querySelectorAll('selectorCSS') - Accede a todos los elementos que coincidan con el selector CSS, devuelve un nodeList
 */
 
-/* const title = document.getElementById('title')
+//acceso a id = "title"
+const title = document.getElementById('title');
+console.log(title);
+//leer contenido
+console.log(title.textContent);
+//escribir contenido de forma dinámica
+title.textContent = 'Accediendo a Nodos';
+console.log(title.textContent);
 
-title.textContent = 'DOM - Accediendo a nodos' */
 
-/* const paragraph = document.querySelector('.paragraph')
+//class = "paragraph"
+const paragraph1 = document.querySelector('.paragraph:nth-child(1)');
+console.log(paragraph1.textContent);
+const paragraph2 = document.querySelector('.paragraph:nth-child(2)');
+console.log(paragraph2.textContent);
+const paragraph3 = document.querySelector('.paragraph:nth-child(3)');
+console.log(paragraph3.textContent);
+const span = document.getElementById('title').querySelector("span")
 
-const span = document.getElementById('title').querySelector("span") */
-
-const paragraphs = document.querySelectorAll('.paragraph')
+//también se puede acceder desde un elemento
+const paragraph = document.querySelector('.paragraph');
+const span2 = paragraph.querySelector("span");
+console.log(span2);
+console.log(span2.textContent);
 
 //const paragraphsSpread = [...document.querySelectorAll('.paragraph')]
 
-const paragraphsArray = Array.from(document.querySelectorAll('.paragraph'))
+//const paragraphsArray = Array.from(document.querySelectorAll('.paragraph'))
 
-paragraphs[0].style.color = 'red'
+//paragraphs[0].style.color = 'red'
 
 //paragraphs.map(p => p.style.color = 'green')
 
 //paragraphsSpread.map(p => p.style.color = 'green')
 
-paragraphsArray.map(p=>p.style.color='blue')
+//paragraphsArray.map(p=>p.style.color='blue')
