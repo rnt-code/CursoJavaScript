@@ -53,4 +53,3 @@ let data = [12, 5, 8, 130, 44]
 //var filtrados = [12, 5, 8, 130, 44].filter(x => {return x >= 10});
 var filtrados = data.filter(x => x >= 10); //funciona igual porque las funciones flecha tienen return implícito
 console.log(filtrados);
-
