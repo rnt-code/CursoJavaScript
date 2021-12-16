@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Event Example</title>
+
+
+    </head>
+    <body>
+
+        <button class="confirmUpdateDialog">Update Dialog</button>
+
+        <script>   
+            applyUpdate = function() {
+                console.log("hiciste click");
+            }
+            
+            let okay = document.querySelector(".confirmUpdateDialog");
+            
+            okay.addEventListener('click', applyUpdate);
+            
+        </script>
+    </body>
+</html>
