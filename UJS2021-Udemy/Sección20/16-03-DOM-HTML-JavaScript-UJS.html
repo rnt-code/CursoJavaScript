@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo'>Ejemplo DOM con JavaScript</h1>
+    <p id='parrafo'>Saludos!</p>
+
+    <script>
+
+        //titulo y parrafo contiene h1 y p
+        let titulo = document.getElementById('titulo');
+        let parrafo = document.getElementById('parrafo');
+       
+        console.log(typeof titulo);
+        console.log(typeof titulo.innerHTML);
+        
+        //escribimos en la consola las variables titulo y parrafo
+        //con innerHTML recuperamos el texto interno de h1 y p
+        
+        //console.log('valor titulo:' + titulo.innerHTML);
+        //console.log('valor parrafo:' + parrafo.innerHTML);
+        console.log(`valor titulo: ${titulo.innerHTML}`)
+        console.log(`valor parrafo: ${parrafo.innerHTML}`);
+
+        //Cambiamos el HTML
+        titulo.innerHTML = "Nuevo valor del Título";
+        parrafo.innerHTML = "Nuevo valor de párrafo";
+
+    </script>
+</body>
+</html>
